@@ -1,8 +1,22 @@
 package model;
 
-public enum VenueType {
+import lombok.Data;
+import lombok.experimental.Accessors;
+import org.hibernate.annotations.GenericGenerator;
 
-    APARTMENT, SINGLE_ROOM, DOUBLE_ROOM
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+@Data
+@Accessors(chain = true)
+@Entity
+public class VenueType {
+
+    @Id
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
+    private String id;
+    private String value;
 
 }

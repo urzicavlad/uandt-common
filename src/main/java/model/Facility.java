@@ -1,8 +1,20 @@
 package model;
 
-public enum Facility {
+import lombok.Data;
+import lombok.experimental.Accessors;
+import org.hibernate.annotations.GenericGenerator;
 
-    FREE_WIFI, HEATING, NON_SMOKING_ROOMS, FREE_PARKING
+import javax.persistence.*;
 
+@Data
+@Accessors(chain = true)
+@Entity
+public class Facility {
+
+    @Id
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
+    private String id;
+    private String value;
 
 }
