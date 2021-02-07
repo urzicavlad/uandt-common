@@ -26,9 +26,9 @@ public class Accommodation {
     private String name;
     private String zone;
     private String city;
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.MERGE)
     private List<Facility> facilities = Collections.emptyList();
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.MERGE)
     private VenueType venueType;
     private String imageUrl;
     private String directLink;
