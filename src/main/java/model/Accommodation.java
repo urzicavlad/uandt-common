@@ -8,6 +8,7 @@ import lombok.experimental.Accessors;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -27,7 +28,7 @@ public class Accommodation {
     private String zone;
     private String city;
     @ManyToMany(cascade = CascadeType.MERGE)
-    private List<Facility> facilities = Collections.emptyList();
+    private List<Facility> facilities = new ArrayList<>();
     @OneToOne(cascade = CascadeType.MERGE)
     private VenueType venueType;
     private String imageUrl;
