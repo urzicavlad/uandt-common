@@ -10,6 +10,7 @@ import javax.persistence.*;
 @Accessors(chain = true)
 @Entity
 public class CardDetails {
+
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")

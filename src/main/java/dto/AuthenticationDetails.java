@@ -11,6 +11,7 @@ public class AuthenticationDetails {
     private String userId;
     private String fullName;
     private String email;
+    private String username;
     private String error;
     private String role;
 

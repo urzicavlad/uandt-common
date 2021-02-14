@@ -9,20 +9,12 @@ import javax.persistence.*;
 @Data
 @Accessors(chain = true)
 @Entity
-public class User {
+public class ContactAgent {
 
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
-    private String fullName;
-    private String username;
-    private String firstName;
-    private String lastName;
-    private String password;
-    private String email;
-    @OneToOne(cascade=CascadeType.ALL)
-    private Address address;
-    private String role;
-
+    @OneToOne(cascade = CascadeType.ALL)
+    private User user;
 }
