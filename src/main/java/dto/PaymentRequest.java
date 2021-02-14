@@ -1,8 +1,10 @@
 package dto;
 
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 @Data
+@Accessors(chain = true)
 public class PaymentRequest {
 
     private String cardType;
@@ -13,6 +15,7 @@ public class PaymentRequest {
     private String billingZipCode;
     private String billingInvoiceEmail;
     private String amount;
+    private boolean useDefaultPayment;
 
 
 }
