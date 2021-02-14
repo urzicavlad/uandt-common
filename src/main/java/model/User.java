@@ -4,10 +4,7 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 @Data
 @Accessors(chain = true)
@@ -22,7 +19,7 @@ public class User {
     private String lastName;
     private String password;
     private String email;
-    @OneToOne
+    @OneToOne(cascade=CascadeType.ALL)
     private Address address;
 
 }

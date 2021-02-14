@@ -31,6 +31,7 @@ public class Reservation {
     private LocalDateTime createDateTime;
     @UpdateTimestamp
     private LocalDateTime updateDateTime;
+    private String flow;
 
     public enum Status {
         PENDING_PAYMENT,
