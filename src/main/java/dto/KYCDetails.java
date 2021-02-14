@@ -7,7 +7,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class KYCDetails {
 
-    private String responseId;
+    private String sessionId;
     private String userId;
 
 }
