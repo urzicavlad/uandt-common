@@ -4,23 +4,23 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Data
 @Accessors(chain = true)
 @Entity
-public class CardDetails {
+public class Payment {
+
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
-    @Column(unique=true)
-    private String cardNumber;
-    private String cardType;
-
-    private Double credit;
-
     @OneToOne
-    private User user;
-
+    private CardDetails cardDetails;
+    @OneToOne
+    private Reservation reservation;
+    private Double amount;
 }

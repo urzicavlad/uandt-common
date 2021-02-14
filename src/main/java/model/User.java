@@ -7,6 +7,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Data
 @Accessors(chain = true)
@@ -21,5 +22,7 @@ public class User {
     private String lastName;
     private String password;
     private String email;
+    @OneToOne
+    private Address address;
 
 }
