@@ -11,5 +11,6 @@ public class ReservationRequest {
     private String userId;
     private String startDate;
     private String endDate;
+    private String flow;
 
 }
