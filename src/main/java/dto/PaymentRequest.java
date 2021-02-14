@@ -17,5 +17,4 @@ public class PaymentRequest {
     private String amount;
     private boolean useDefaultPayment;
 
-
 }

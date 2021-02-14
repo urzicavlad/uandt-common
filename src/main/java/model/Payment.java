@@ -23,4 +23,5 @@ public class Payment {
     @OneToOne
     private Reservation reservation;
     private Double amount;
+
 }

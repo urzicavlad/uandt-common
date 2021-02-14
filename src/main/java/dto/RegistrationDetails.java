@@ -13,5 +13,6 @@ public class RegistrationDetails {
     private String password;
     private String street;
     private String zipCode;
-    
+    private String role;
+
 }

@@ -4,7 +4,6 @@ import com.google.protobuf.Struct;
 import com.google.protobuf.Value;
 import lombok.Data;
 import lombok.experimental.Accessors;
-import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -30,4 +29,5 @@ public class Price {
                 .putFields("value", Value.newBuilder().setStringValue(requireNonNull(value)).build())
                 .build();
     }
+
 }

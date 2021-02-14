@@ -14,7 +14,7 @@ public class CardDetails {
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
-    @Column(unique=true)
+    @Column(unique = true)
     private String cardNumber;
     private String cardType;
 
