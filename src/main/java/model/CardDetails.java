@@ -18,9 +18,7 @@ public class CardDetails {
     @Column(unique = true)
     private String cardNumber;
     private String cardType;
-
     private Double credit;
-
     @OneToOne
     private User user;
 

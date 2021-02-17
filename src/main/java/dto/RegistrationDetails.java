@@ -15,5 +15,8 @@ public class RegistrationDetails {
     private String street;
     private String zipCode;
     private String role;
+    private String cardNumber;
+    private String cvv;
+    private String date;
 
 }
