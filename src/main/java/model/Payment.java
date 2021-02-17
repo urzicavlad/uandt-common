@@ -1,6 +1,7 @@
 package model;
 
 import lombok.Data;
+import lombok.ToString;
 import lombok.experimental.Accessors;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -21,6 +22,7 @@ public class Payment {
     @OneToOne
     private CardDetails cardDetails;
     @OneToOne
+    @ToString.Exclude
     private Reservation reservation;
     private Double amount;
 

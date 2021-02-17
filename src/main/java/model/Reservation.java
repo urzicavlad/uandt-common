@@ -1,6 +1,7 @@
 package model;
 
 import lombok.Data;
+import lombok.ToString;
 import lombok.experimental.Accessors;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
@@ -24,6 +25,7 @@ public class Reservation {
     private Accommodation accommodation;
     private Status status;
     @OneToOne
+    @ToString.Exclude
     private Payment payment;
     @ManyToOne
     private User user;
